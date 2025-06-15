@@ -14,7 +14,7 @@ const downloadBtn = document.getElementById('downloadBtn');
 const regenerateBtn = document.getElementById('regenerateBtn');
 
 // Server configuration
-const SERVER_URL = 'http://localhost:3000';
+const SERVER_URL = '';
 
 // Loading state
 let isLoading = false;
