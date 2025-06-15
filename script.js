@@ -16,7 +16,7 @@ const downloadBtn = document.getElementById('downloadBtn');
 const regenerateBtn = document.getElementById('regenerateBtn');
 
 // Server configuration
-const SERVER_URL = 'http://localhost:5000';
+const SERVER_URL = 'https://cold-email-generator.vercel.app';
 
 // Loading state
 let isLoading = false;
