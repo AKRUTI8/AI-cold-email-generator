@@ -9,7 +9,7 @@ const port = process.env.PORT || 5000;
 // Middleware
 app.use(cors());
 app.use(express.json());
-
+app.use(express.static(path.join(__dirname, 'public')));
 // Initialize Groq client
 const groq = new Groq({
     apiKey: process.env.GROQ_API_KEY
@@ -95,7 +95,7 @@ IMPORTANT: You must respond with a valid JSON object in the following format:
     }
 });
 // Serve static files from 'public' folder (optional)
-app.use(express.static(path.join(__dirname, 'public')));
+
 
 // Route to render HTML page
 app.get('/', (req, res) => {
