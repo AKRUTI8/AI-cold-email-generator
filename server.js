@@ -94,7 +94,13 @@ IMPORTANT: You must respond with a valid JSON object in the following format:
         });
     }
 });
+// Serve static files from 'public' folder (optional)
+app.use(express.static(path.join(__dirname, 'public')));
 
+// Route to render HTML page
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'index.html'));
+});
 // Start server
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
